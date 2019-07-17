@@ -3,20 +3,16 @@
         <title>Pew</title>
     </head>
     <body>
-        <div>
-            <h1><a href="/">Who are dog?</a></h1>
-        </div>
+      <div>
+        <h1><a href="/">Pew Pew </a></h1>
+      </div>
 
+      {% for post in posts %}
         <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Day 1</a></h2>
-            <p>Ruin has come to our family.</p>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Day 2</a></h2>
-            <p>FeelsBadMan</p>
-        </div>
+    {% endfor %}
     </body>
 </html>
